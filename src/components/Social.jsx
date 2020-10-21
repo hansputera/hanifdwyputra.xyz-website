@@ -1,11 +1,12 @@
 import React from "react";
 import { Card, CardGroup } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import Navbar from "./templates/Navbar";
 
 export default class Social extends React.Component {
     constructor() {
         super();
+
+        this.state = {};
     }
         
     render() {
@@ -30,7 +31,7 @@ export default class Social extends React.Component {
                             </Card.Footer>
                         </Card>
 
-                        <Card border="dark">
+                        <Card border="red">
                             <Card.Body>
                                 <Card.Title>Discord</Card.Title>
                                 <Card.Text>

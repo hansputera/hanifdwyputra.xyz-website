@@ -48,7 +48,7 @@ export default class Home extends React.Component {
       <div>
         <Navbar></Navbar>
       <div className="jumbotron text-center">
-        <img className="rounded-circle" alt="My profile photo" src="favicon.ico" />
+        <img className="rounded-circle" alt="My profile photo" src="./favicon.ico" />
         <h1>Hanif Dwy Putra S</h1>
         <p className="lead">My name is <strong>Hanif Dwy Putra S</strong> 13 y.o Student and Learn How to use JavaScript, Typescript, etc..</p>
       </div>
@@ -67,7 +67,7 @@ export default class Home extends React.Component {
         <hr />
         <ul className="navbar-nav">
           <li className="navbar-item">
-            <img src="favicon.ico" alt="react photo" />
+            <img src="./favicon.ico" alt="react photo" />
             <a size="100px" className="nav-link" href="https://reactjs.org">ReactJS</a>
             </li>
         </ul>
