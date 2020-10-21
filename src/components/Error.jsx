@@ -16,7 +16,7 @@ export default class Error extends React.Component {
                 <h1>404 Not Found</h1>
             </div>
             <div className="message text-center">
-                <h2>Could't find your path, go <Link to="/">back</Link></h2>
+                <h2>Couldn't find your path, go <Link to="/">back</Link></h2>
             </div>
         </div>
         )

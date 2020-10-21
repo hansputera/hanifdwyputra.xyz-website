@@ -1,5 +1,6 @@
 import React from "react";
 import swal from "sweetalert";
+import Navbar from "./templates/Navbar";
 
 import "bootswatch/dist/superhero/bootstrap.min.css";
 import "bootswatch/dist/slate/bootstrap.min.css";
@@ -45,9 +46,7 @@ export default class Home extends React.Component {
     } else
     return (
       <div>
-        <nav className="navbar navbar-dark bg-dark">
-         <a className="navbar-brand" href="#">{ this.state.title }</a>
-        </nav>
+        <Navbar></Navbar>
       <div className="jumbotron text-center">
         <img className="rounded-circle" alt="My profile photo" src="favicon.ico" />
         <h1>Hanif Dwy Putra S</h1>
