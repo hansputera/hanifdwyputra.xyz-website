@@ -14,10 +14,12 @@ export default class Home extends React.Component {
         "Currently my website got maintenance for a long time, you can see this website in 2 or 3 months again.",
         "I don't have time for build website, so platform android is disable for this website. Sorry",
         "You can contribute make beautiful website for me, i will give appreciate for that!."
-      ]
+      ],
+      defaultTitle: "Hanif Dwy Putra S | hanifdwyputra.xyz"
     }
   }
   render() {
+    if (document.title.includes("404")) document.title = this.state.defaultTitle;
     const wasAlerted = window.localStorage.getItem("alert_maintenance");
     
     if (!["win32", "win64", "macos", "linux"].includes(navigator.platform.toLowerCase())) {
@@ -44,7 +46,7 @@ export default class Home extends React.Component {
     return (
       <div>
         <nav className="navbar navbar-dark bg-dark">
-    <a className="navbar-brand" href="#">{ this.state.title }</a>
+         <a className="navbar-brand" href="#">{ this.state.title }</a>
         </nav>
       <div className="jumbotron text-center">
         <img className="rounded-circle" alt="My profile photo" src="favicon.ico" />
