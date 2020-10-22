@@ -22,12 +22,12 @@ export default class Discord extends React.Component {
         return first = (
             <pre>You will be redirected to discord page in {this.state.willRedirectIn} seconds...</pre>
         );
-    }, 1000.75);
+    }, 2000);
     if (this.state.willRedirectIn == 0) {
         {
-            window.close();
-            window.open("https://surabayajs.org/discord");
+            window.open("https://discord.gg/p6Csapn"); // Rexar Network...
         }
+        first = <Redirect to="/"></Redirect>;
     } else {
          return first;
      }
