@@ -17,20 +17,17 @@ export default class Discord extends React.Component {
             <pre>You will be redirected to discord page in {this.state.willRedirectIn} seconds...</pre>
         );
     setInterval(() => {
-        if (!this.state.willRedirectIn) {
-            return first = (
-                <Redirect to="https://surabayajs.org/discord"></Redirect>
-            );
-        } else {
         this.setState({
             willRedirectIn: this.state.willRedirectIn - 1
         });
         return first = (
             <pre>You will be redirected to discord page in {this.state.willRedirectIn} seconds...</pre>
         );
-    }
     }, 1000);
-
-    return first;
+    if (this.state.willRedirectIn == 0) {
+        return <Redirect to="https://surabayajs.org/discord"></Redirect>;
+    } else {
+         return first;
+     }
     }
 }
