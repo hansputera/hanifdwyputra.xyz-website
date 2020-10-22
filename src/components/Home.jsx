@@ -16,15 +16,15 @@ export default class Home extends React.Component {
   render() {
     if (document.title.includes("404")) document.title = this.state.defaultTitle;
     return (
-      <div>
+      <div class="text-center">
         <Navbar></Navbar>
-      <div className="jumbotron text-center">
+      <div className="jumbotron">
         <img className="rounded-circle" alt="My profile photo" src="./favicon.ico" />
         <h1>Hanif Dwy Putra S</h1>
         <p className="lead">My name is <strong>Hanif Dwy Putra S</strong> 13 y.o Student and Learn How to use JavaScript, Typescript, etc..</p>
       </div>
 
-      <section className="about text-center">
+      <section className="about">
         <h2>About Me</h2>
         <hr />
         <div className="container">
@@ -33,7 +33,7 @@ export default class Home extends React.Component {
       </section>
 
       <br />
-      <section className="built text-center">
+      <section className="built">
         <h2>Built by</h2>
         <hr />
         <ul className="navbar-nav">
