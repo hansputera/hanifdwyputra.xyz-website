@@ -14,7 +14,7 @@ export default class Home extends React.Component {
     }
   }
   render() {
-    if (document.title.includes("404")) document.title = this.state.defaultTitle;
+    document.title = this.state.defaultTitle;
     return (
       <div class="text-center">
         <Navbar></Navbar>

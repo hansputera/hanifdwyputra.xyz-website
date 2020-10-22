@@ -13,6 +13,7 @@ export default class Discord extends React.Component {
     }
 
     render() {
+	document.title = "Rexar Network | Discord";
         let first = (
             <pre>You will be redirected to discord page in {this.state.willRedirectIn} seconds...</pre>
         );
