@@ -14,18 +14,18 @@ export default class Discord extends React.Component {
 
     render() {
         let first = (
-            <pre>You will be redirected to discord page in 10 seconds...</pre>
+            <pre>You will be redirected to discord page in {this.state.willRedirectIn} seconds...</pre>
         );
     setInterval(() => {
         if (!this.state.willRedirectIn) {
-            first = (
+            return first = (
                 <Redirect to="https://surabayajs.org/discord"></Redirect>
             );
         } else {
         this.setState({
             willRedirectIn: this.state.willRedirectIn - 1
         });
-        first = (
+        return first = (
             <pre>You will be redirected to discord page in {this.state.willRedirectIn} seconds...</pre>
         );
     }
