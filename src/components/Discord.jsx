@@ -1,5 +1,4 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
 
 /* 
 * TESTING REDIRECT
@@ -23,9 +22,12 @@ export default class Discord extends React.Component {
         return first = (
             <pre>You will be redirected to discord page in {this.state.willRedirectIn} seconds...</pre>
         );
-    }, 1000);
+    }, 1000.75);
     if (this.state.willRedirectIn == 0) {
-        return <Redirect to="https://surabayajs.org/discord"></Redirect>;
+        {
+            window.close();
+            window.open("https://surabayajs.org/discord");
+        }
     } else {
          return first;
      }
