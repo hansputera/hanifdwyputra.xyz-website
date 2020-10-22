@@ -1,5 +1,4 @@
 import React from "react";
-import swal from "sweetalert";
 import Navbar from "./templates/Navbar";
 
 import "bootswatch/dist/superhero/bootstrap.min.css";
@@ -11,39 +10,11 @@ export default class Home extends React.Component {
 
     this.state = {
       title: "Website",
-      maintenance_text: [
-        "Currently my website got maintenance for a long time, you can see this website in 2 or 3 months again.",
-        "I don't have time for build website, so platform android is disable for this website. Sorry",
-        "You can contribute make beautiful website for me, i will give appreciate for that!."
-      ],
       defaultTitle: "Hanif Dwy Putra S | hanifdwyputra.xyz"
     }
   }
   render() {
     if (document.title.includes("404")) document.title = this.state.defaultTitle;
-    const wasAlerted = window.localStorage.getItem("alert_maintenance");
-    
-    if (!["win32", "win64", "macos", "linux"].includes(navigator.platform.toLowerCase())) {
-      if (!wasAlerted || !JSON.parse(wasAlerted).status) swal({
-        title: "Maintenance",
-        text: "Platform Android is Maintenance",
-        icon: "error"
-      }).then(() => {
-        window.localStorage.setItem("alert_maintenance", JSON.stringify({
-          context: "Android",
-          status: true
-        }));
-      });
-      return (
-      <div className="text-center">
-        <div className="jumbotron text-center">
-          <h1>YOUR DEVICE DOESN'T COMPATIBLE</h1>
-          <h4>BECAUSE MY WEBSITE IS MAINTENANCE FOR HANDPHONE</h4>
-        </div>
-      <marquee>{ this.state.maintenance_text[Math.floor(Math.random() * this.state.maintenance_text.length)]}</marquee>
-      </div>
-      )
-    } else
     return (
       <div>
         <Navbar></Navbar>
