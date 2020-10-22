@@ -29,7 +29,7 @@ export default class Discord extends React.Component {
         {
             window.open("https://discord.gg/p6Csapn"); // Rexar Network...
         }
-        first = <Redirect to="/"></Redirect>;
+      return first = <Redirect to="/"></Redirect>;
     } else {
          return first;
      }
