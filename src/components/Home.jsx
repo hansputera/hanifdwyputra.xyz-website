@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./templates/Navbar";
+import swal from "sweetalert";
 
 import "bootswatch/dist/superhero/bootstrap.min.css";
 import "bootswatch/dist/slate/bootstrap.min.css";
@@ -15,9 +16,17 @@ export default class Home extends React.Component {
   }
   render() {
     document.title = this.state.defaultTitle;
+    if (!window.localStorage.getItem("haveAlert") || window.localStorage.getItem("haveAlert") != "1") {
+      swal({
+        title: "Maintenance",
+        text: "Still development..",
+        icon: "danger"
+      });
+      window.localStorage.setItem("hasAlert", "1");
+    }
     return (
       <div class="text-center">
-        <Navbar></Navbar>
+        <Navbar />
       <div className="jumbotron">
         <img className="rounded-circle" alt="My profile photo" src="/favicon.ico" />
         <h1>Hanif Dwy Putra S</h1>

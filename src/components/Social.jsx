@@ -33,13 +33,16 @@ export default class Social extends React.Component {
 
                         <Card border="red">
                             <Card.Body>
-                                <Card.Title>Discord</Card.Title>
+                                <Card.Title>
+                                    <a href="https://raznar.xyz">Raznar Hosting</a>
+                                </Card.Title>
                                 <Card.Text>
-                                    Dukung <a href="https://surabayajs.org/discord">SurabayaJS</a> dan <a href="https://mathdro.id/discord">Mathdro.ID</a> di discord, serta tambahkan saya di discord <strong>hanifdwypoetra#7343</strong>
+                                Cheapest Game Hosting in the world!, starting at 0.8$ / GB Month (Shared Hosting), fast-response, secure & realible hosting with powerful anti-ddos.
+                                Game Hosting termurah di dunia!, Mulai dari Rp12.000,00  / GB Bulan (Hosting Bersama), respon cepat, hosting yang aman & handal dengan anti-ddos yang kuat.
                                 </Card.Text>
                             </Card.Body>
                             <Card.Footer>
-                                <small className="text-muted">Added on 21/10/2020</small>
+                                <small className="text-muted">Added on 30/10/2020</small>
                             </Card.Footer>
                         </Card>
                     </CardGroup>
