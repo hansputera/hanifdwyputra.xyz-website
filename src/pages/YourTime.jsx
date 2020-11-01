@@ -32,10 +32,6 @@ export default class YourTime extends React.Component {
 
     render() {
     const titleCountdown = document.getElementById("title");
-    const daysCountdown = document.getElementById('days');
-    const hoursCountdown = document.getElementById('#hours');
-    const minutesCountdown = document.getElementById('minutes');
-    const secondsCountdown = document.getElementById('seconds');
   
     const currentTime = new Date();
     let yearOfTheEvent = currentTime.getFullYear();
@@ -68,19 +64,10 @@ export default class YourTime extends React.Component {
   
       if ( isItMarch24 ) {
         console.log('Happy birthday, Hanif!');
-        daysCountdown.remove();
-        hoursCountdown.remove();
-        minutesCountdown.remove();
-        secondsCountdown.remove();
         titleCountdown.remove();
         document.querySelector("#message").innerHTML = "Today is my birthday, happy birthday!!";
       } else {
-
-        daysCountdown.innerHTML = days;
-        hoursCountdown.innerHTML = hours;
-        minutesCountdown.innerHTML = minutes;
-        secondsCountdown.innerHTML = seconds;
-
+        document.querySelector("#message").innerHTML = `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
       } // end of if ( isItMarch24 )
   
     } // end of countdown
@@ -105,7 +92,7 @@ export default class YourTime extends React.Component {
                 <h1>Loading....</h1>
                 <hr />
                 <p className="lead" id="title">Road to my Birthday!</p>
-                <h1 id="message"><div id="days">0</div> Days <div id="hours">0</div> Hours <div id="minutes">0</div> Minutes <div id="seconds">0</div> Seconds</h1>
+                <h1 id="message">Loading...</h1>
             </Box>
         );
     }
