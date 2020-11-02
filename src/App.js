@@ -7,6 +7,7 @@ import { Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import YourTime from "./pages/YourTime";
+import Error from "./pages/Error";
 
 const breakpoints = ["360px", "768px", "1024px", "1440px"];
 breakpoints.sm = breakpoints[0];
@@ -25,6 +26,7 @@ function App() {
       <Header />
       <Route path="/" component={Home} exact />
       <Route path="/time" component={YourTime} />
+      <Route component={Error} />
       <Footer />
     </ThemeProvider>
   );
