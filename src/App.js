@@ -1,7 +1,7 @@
 import React from "react";
 import { theme, ThemeProvider } from "@chakra-ui/core";
 import Header from "./components/Header";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 // Pages
 import Home from "./pages/Home";
@@ -24,9 +24,11 @@ function App() {
   return (
     <ThemeProvider theme={newTheme}>
       <Header />
+      <Switch>
       <Route path="/" component={Home} exact />
       <Route path="/time" component={YourTime} />
       <Route component={Error} />
+      </Switch>
       <Footer />
     </ThemeProvider>
   );
